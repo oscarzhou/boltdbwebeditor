@@ -3,6 +3,7 @@ module github.com/boltdbwebeditor/boltdbwebeditor
 go 1.21.0
 
 require (
+	github.com/gin-contrib/static v0.0.1
 	github.com/gin-gonic/gin v1.9.1
 	github.com/pkg/errors v0.9.1
 	github.com/rs/zerolog v1.30.0

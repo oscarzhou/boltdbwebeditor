@@ -2,11 +2,15 @@ package webServer
 
 import (
 	"github.com/boltdbwebeditor/boltdbwebeditor/src/handlers"
+
+	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
 )
 
 func Start() {
 	router := gin.Default()
+
+	router.Use(static.Serve("/", static.LocalFile("/app/static", false)))
 
 	router.GET("/api/db", handlers.Import)
 
@@ -16,6 +20,5 @@ func Start() {
 
 	router.GET("/api/db/download", handlers.DownloadDBFile)
 
-	// listen on :8080
-	router.Run()
+	router.Run(":8080")
 }

@@ -4,7 +4,7 @@ import { Fragment, useState } from "react";
 import Modal from "./UI/Modal";
 
 function App() {
-  const [showFileUpload, setShowFileUpload] = useState(true);
+  const [showFileUpload, setShowFileUpload] = useState(false);
 
   const openUploadDialog = () => {
     setShowFileUpload(true);
